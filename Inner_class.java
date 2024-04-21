@@ -32,7 +32,7 @@ class Outer {
 
 // Class 3
 // Main class
-class GFG {
+class Ineer_class {
 
 	// Main driver method
 	public static void main(String[] args)
