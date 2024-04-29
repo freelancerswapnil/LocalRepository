@@ -11,7 +11,7 @@ public class Calculator_1 {
         System.out.println("Please enter the second number:");
         double num2 = scanner.nextDouble();
 
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt):");
         char operator = scanner.next().charAt(0);
 
         double result;
@@ -37,8 +37,11 @@ public class Calculator_1 {
             case '^':
                 result = Math.pow(num1, num2);
                 break;
-            case 'sqrt':
-                result = Math.sqrt(num1);
+            case 's': // Changed 'sqrt' to 's' for square root
+                result = squareRoot(num1);
+                break;
+            case 'c':
+                result = cubeRoot(num1);
                 break;
             default:
                 System.out.println("Error: Invalid operator!");
@@ -46,5 +49,13 @@ public class Calculator_1 {
         }
 
         System.out.println("Result: " + result);
+    }
+
+    public static double squareRoot(double num) {
+        return Math.sqrt(num);
+    }
+
+    public static double cubeRoot(double num) {
+        return Math.cbrt(num);
     }
 }
