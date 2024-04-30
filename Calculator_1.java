@@ -11,7 +11,7 @@ public class Calculator_1 {
         System.out.println("Please enter the second number:");
         double num2 = scanner.nextDouble();
 
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, !):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, !, ln):");
         char operator = scanner.next().charAt(0);
 
         double result;
@@ -46,6 +46,9 @@ public class Calculator_1 {
             case '!':
                 result = factorial((int) num1);
                 break;
+            case 'l':
+                result = naturalLog(num1);
+                break;
             default:
                 System.out.println("Error: Invalid operator!");
                 return;
@@ -70,5 +73,9 @@ public class Calculator_1 {
             fact *= i;
         }
         return fact;
+    }
+    
+    public static double naturalLog(double num) {
+        return Math.log(num);
     }
 }
