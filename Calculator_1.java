@@ -11,7 +11,7 @@ public class Calculator_1 {
         System.out.println("Please enter the second number:");
         double num2 = scanner.nextDouble();
 
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, !, ln):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, !, ln, sin):");
         char operator = scanner.next().charAt(0);
 
         double result;
@@ -49,6 +49,9 @@ public class Calculator_1 {
             case 'l':
                 result = naturalLog(num1);
                 break;
+            case 'i':
+                result = sine(num1);
+                break;
             default:
                 System.out.println("Error: Invalid operator!");
                 return;
@@ -77,5 +80,9 @@ public class Calculator_1 {
     
     public static double naturalLog(double num) {
         return Math.log(num);
+    }
+    
+    public static double sine(double num) {
+        return Math.sin(Math.toRadians(num));
     }
 }
