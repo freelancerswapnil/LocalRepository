@@ -11,7 +11,7 @@ public class Calculator_1 {
         System.out.println("Please enter the second number:");
         double num2 = scanner.nextDouble();
 
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, !):");
         char operator = scanner.next().charAt(0);
 
         double result;
@@ -43,6 +43,9 @@ public class Calculator_1 {
             case 'c':
                 result = cubeRoot(num1);
                 break;
+            case '!':
+                result = factorial((int) num1);
+                break;
             default:
                 System.out.println("Error: Invalid operator!");
                 return;
@@ -57,5 +60,15 @@ public class Calculator_1 {
 
     public static double cubeRoot(double num) {
         return Math.cbrt(num);
+    }
+    
+    public static int factorial(int num) {
+        if (num == 0)
+            return 1;
+        int fact = 1;
+        for (int i = 1; i <= num; i++) {
+            fact *= i;
+        }
+        return fact;
     }
 }
