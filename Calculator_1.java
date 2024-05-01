@@ -11,7 +11,7 @@ public class Calculator_1 {
         System.out.println("Please enter the second number:");
         double num2 = scanner.nextDouble();
 
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, !, ln, sin):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, !, ln, sin, cos):");
         char operator = scanner.next().charAt(0);
 
         double result;
@@ -52,6 +52,9 @@ public class Calculator_1 {
             case 'i':
                 result = sine(num1);
                 break;
+            case 'o':
+                result = cosine(num1);
+                break;
             default:
                 System.out.println("Error: Invalid operator!");
                 return;
@@ -67,7 +70,7 @@ public class Calculator_1 {
     public static double cubeRoot(double num) {
         return Math.cbrt(num);
     }
-    
+
     public static int factorial(int num) {
         if (num == 0)
             return 1;
@@ -77,12 +80,16 @@ public class Calculator_1 {
         }
         return fact;
     }
-    
+
     public static double naturalLog(double num) {
         return Math.log(num);
     }
-    
+
     public static double sine(double num) {
         return Math.sin(Math.toRadians(num));
+    }
+
+    public static double cosine(double num) {
+        return Math.cos(Math.toRadians(num));
     }
 }
