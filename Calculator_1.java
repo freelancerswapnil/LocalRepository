@@ -11,7 +11,7 @@ public class Calculator_1 {
         System.out.println("Please enter the second number:");
         double num2 = scanner.nextDouble();
 
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, 4rt, !, ln, sin, cos, tan):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, 4rt, !, ln, sin, cos, tan, exp):");
         char operator = scanner.next().charAt(0);
 
         double result;
@@ -61,6 +61,9 @@ public class Calculator_1 {
             case 't':
                 result = tangent(num1);
                 break;
+            case 'e':
+                result = exponential(num1);
+                break;
             default:
                 System.out.println("Error: Invalid operator!");
                 return;
@@ -105,5 +108,9 @@ public class Calculator_1 {
 
     public static double tangent(double num) {
         return Math.tan(Math.toRadians(num));
+    }
+
+    public static double exponential(double num) {
+        return Math.exp(num);
     }
 }
