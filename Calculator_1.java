@@ -11,7 +11,7 @@ public class Calculator_1 {
         System.out.println("Please enter the second number:");
         double num2 = scanner.nextDouble();
 
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, !, ln, sin, cos, tan):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, 4rt, !, ln, sin, cos, tan):");
         char operator = scanner.next().charAt(0);
 
         double result;
@@ -43,6 +43,9 @@ public class Calculator_1 {
             case 'c':
                 result = cubeRoot(num1);
                 break;
+            case '4':
+                result = fourthRoot(num1);
+                break;
             case '!':
                 result = factorial((int) num1);
                 break;
@@ -72,6 +75,10 @@ public class Calculator_1 {
 
     public static double cubeRoot(double num) {
         return Math.cbrt(num);
+    }
+
+    public static double fourthRoot(double num) {
+        return Math.pow(num, 0.25);
     }
 
     public static int factorial(int num) {
