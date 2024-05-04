@@ -11,7 +11,7 @@ public class Calculator_1 {
         System.out.println("Please enter the second number:");
         double num2 = scanner.nextDouble();
 
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, 4rt, !, ln, sin, cos, tan, exp):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, 4rt, !, ln, sin, cos, tan, exp, abs):");
         char operator = scanner.next().charAt(0);
 
         double result;
@@ -64,6 +64,9 @@ public class Calculator_1 {
             case 'e':
                 result = exponential(num1);
                 break;
+            case 'a':
+                result = absoluteValue(num1);
+                break;
             default:
                 System.out.println("Error: Invalid operator!");
                 return;
@@ -112,5 +115,9 @@ public class Calculator_1 {
 
     public static double exponential(double num) {
         return Math.exp(num);
+    }
+    
+    public static double absoluteValue(double num) {
+        return Math.abs(num);
     }
 }
