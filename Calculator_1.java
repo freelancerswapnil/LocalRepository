@@ -1,18 +1,14 @@
-import java.util.Scanner;
-
 public class Calculator_1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Assign specific values to num1 and num2
+        double num1 = 10.5;
+        double num2 = 5.5;
 
         System.out.println("Welcome to Calculator!");
-        System.out.println("Please enter the first number:");
-        double num1 = scanner.nextDouble();
 
-        System.out.println("Please enter the second number:");
-        double num2 = scanner.nextDouble();
-
+        // You can continue with the rest of your code as before...
         System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, 4rt, !, ln, sin, cos, tan, exp, abs):");
-        char operator = scanner.next().charAt(0);
+        char operator = '+'; // You can choose any operator you want here
 
         double result;
 
@@ -116,7 +112,7 @@ public class Calculator_1 {
     public static double exponential(double num) {
         return Math.exp(num);
     }
-    
+
     public static double absoluteValue(double num) {
         return Math.abs(num);
     }
