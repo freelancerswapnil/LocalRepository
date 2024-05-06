@@ -7,7 +7,7 @@ public class Calculator_1 {
         System.out.println("Welcome to Calculator!");
 
         // You can continue with the rest of your code as before...
-        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, 4rt, !, ln, sin, cos, tan, exp, abs):");
+        System.out.println("Please choose an operation (+, -, *, /, ^, sqrt, cbrt, 4rt, !, ln, sin, cos, tan, exp, abs, rem):");
         char operator = '+'; // You can choose any operator you want here
 
         double result;
@@ -63,6 +63,9 @@ public class Calculator_1 {
             case 'a':
                 result = absoluteValue(num1);
                 break;
+            case 'r':
+                result = remainder(num1, num2);
+                break;
             default:
                 System.out.println("Error: Invalid operator!");
                 return;
@@ -115,5 +118,9 @@ public class Calculator_1 {
 
     public static double absoluteValue(double num) {
         return Math.abs(num);
+    }
+    
+    public static double remainder(double num1, double num2) {
+        return num1 % num2;
     }
 }
