@@ -1,7 +1,7 @@
 //Multiply two matrices program in java 
 import java.io.*; 
 
-// Driver Class 
+
 class multimatix { 
 	// Function to print Matrix 
 	static void printMatrix(int M[][], int rowSize, 
@@ -55,7 +55,6 @@ class multimatix {
 		printMatrix(C, row1, col2); 
 	} 
 
-	// Driver code 
 	public static void main(String[] args) 
 	{ 
 
