@@ -55,6 +55,7 @@ class multimatix {
 		printMatrix(C, row1, col2); 
 	} 
 
+	// function
 	public static void main(String[] args) 
 	{ 
 
