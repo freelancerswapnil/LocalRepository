@@ -1,6 +1,3 @@
-// Java program to demonstrate working of
-// interface
-
 import java.io.*;
 
 // A simple interface
