@@ -6,7 +6,6 @@ interface In1 {
 
     void display();
 }
-
 class TestClass implements In1 {
   
     public void display(){ 
